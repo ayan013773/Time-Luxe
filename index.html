@@ -1,72 +1,195 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#10131d">
-<title>TIME LUXE | Watches that make a statement</title>
+<title>TIME LUXE | Timeless Elegance</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#10131d;--muted:#6c7180;--gold:#d9aa55;--cream:#f7f4ee;--white:#fff;--line:#e8e4dc}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff}
-a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
-.top{background:var(--ink);color:#fff;text-align:center;padding:9px 14px;font-size:12px;letter-spacing:.12em}
-header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
-.logo{font-weight:900;letter-spacing:.17em;font-size:22px}.logo span{color:var(--gold)}
-nav{display:flex;gap:28px;font-size:13px;color:#4e5260}.cart{border:1px solid var(--line);padding:10px 15px;border-radius:30px;font-size:13px;background:white}
-.hero{background:linear-gradient(115deg,#10131d 0%,#252a38 65%,#55442c 100%);color:white;min-height:470px;padding:80px 8%;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px;overflow:hidden}
-.eyebrow{color:#e8bf78;text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:700}
-h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:18px 0;max-width:650px;letter-spacing:-.04em}
-.hero p{color:#d1d2d8;line-height:1.7;max-width:470px;font-size:15px}
-.cta{display:inline-block;background:var(--gold);color:#171923;padding:15px 25px;border-radius:3px;font-weight:800;margin-top:18px;font-size:13px;letter-spacing:.04em}
-.hero-art{height:300px;display:grid;place-items:center;position:relative}
-.watch{width:178px;height:250px;position:relative;transform:rotate(17deg);filter:drop-shadow(0 24px 25px #0008)}
-.strap{position:absolute;left:52px;width:74px;height:250px;background:linear-gradient(90deg,#8e682f,#e0b65f,#8b642d);border-radius:28px;top:0}
-.dial{position:absolute;left:24px;top:65px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#515a68,#101722 65%);border:8px solid #d8b66f;box-shadow:inset 0 0 0 2px #fff5}
-.dial:before{content:"";position:absolute;left:58px;top:24px;width:3px;height:42px;background:#f3d58d;transform:rotate(25deg);transform-origin:bottom}
-.dial:after{content:"";position:absolute;left:60px;top:62px;width:35px;height:2px;background:#f3d58d;transform:rotate(-20deg);transform-origin:left}
-.dial i{position:absolute;inset:13px;border:1px solid #d6b36b88;border-radius:50%}
-.section{padding:75px 8%}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.section h2{font-size:32px;margin:8px 0}.sub{color:var(--muted);font-size:14px}
-.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.product{border:1px solid var(--line);background:#fff;overflow:hidden}
-.product-img{height:245px;background:linear-gradient(145deg,#f4f0e8,#e7dfd1);display:grid;place-items:center;position:relative}
-.product-img .watch{transform:scale(.72) rotate(-12deg);filter:drop-shadow(0 14px 12px #5555)}
-.product-img.blue{background:linear-gradient(145deg,#e8edf2,#d2dce5)}.product-img.dark{background:linear-gradient(145deg,#292d37,#555b67)}
-.product-info{padding:20px}.product-info h3{margin:0 0 7px;font-size:16px}.price{font-weight:800;font-size:19px}.old{color:#9b9da4;text-decoration:line-through;font-size:13px;margin-left:8px;font-weight:400}
-.tag{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#96702f;font-weight:800}
-.add{width:100%;border:0;background:var(--ink);color:#fff;padding:13px;margin-top:16px;font-weight:700}
-.benefits{background:var(--cream);display:grid;grid-template-columns:repeat(3,1fr);gap:25px;padding:36px 8%;text-align:center}
-.benefits strong{display:block;margin-bottom:7px}.benefits span{font-size:12px;color:var(--muted)}
-.pay{background:#151925;color:#fff;padding:65px 8%;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
-.pay h2{font-size:32px;margin:10px 0}.pay p{color:#c2c5ce;line-height:1.7;font-size:14px}
-.pay-card{background:#fff;color:var(--ink);padding:25px;border-radius:8px}.pay-card h3{margin-top:0}.split{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:12px 0;font-size:14px}.split b{font-size:16px}
-footer{padding:35px 8%;background:#0c0f17;color:#c6c8cf;display:flex;justify-content:space-between;gap:20px;font-size:12px}
-.modal{display:none;position:fixed;inset:0;background:#0009;z-index:10;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.dialog{background:#fff;width:min(520px,100%);padding:25px;border-radius:8px;max-height:90vh;overflow:auto}.dialog h2{margin-top:0}.close{float:right;border:0;background:#eee;border-radius:50%;width:30px;height:30px}
-.field{width:100%;padding:12px;border:1px solid #ddd;margin:7px 0 13px;border-radius:4px}.note{background:#fff8e9;padding:12px;font-size:12px;line-height:1.5;color:#76551d}
-.checkout{width:100%;padding:14px;background:var(--gold);border:0;font-weight:800;margin-top:14px}
-@media(max-width:700px){header{padding:0 5%;height:65px}nav{display:none}.hero{grid-template-columns:1fr;padding:55px 7%;text-align:center}.hero p{margin:auto}.hero-art{height:230px}.product-grid{grid-template-columns:1fr 1fr}.product-img{height:190px}.section{padding:55px 6%}.benefits{grid-template-columns:1fr;padding:30px 7%}.pay{grid-template-columns:1fr;padding:50px 7%}footer{flex-direction:column}.section-head{display:block}}
-@media(max-width:430px){.product-grid{grid-template-columns:1fr}.product-img{height:230px}}
+:root {
+  --green:#183c32;
+  --green2:#244f41;
+  --cream:#f7f5ef;
+  --white:#fffefa;
+  --muted:#777d75;
+  --line:#e8e5dc;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:#202b25;font-family:'DM Sans',sans-serif}
+button,input{font:inherit}
+button{cursor:pointer}
+header{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.logo{font-family:'Playfair Display',serif;font-size:27px;font-weight:bold;letter-spacing:2px;color:var(--green)}
+.logo span{color:#b18c57}
+nav{display:flex;gap:28px}
+nav a{text-decoration:none;color:#414b44;font-size:13px}
+.actions{display:flex;gap:12px;align-items:center}
+.cart-btn{background:var(--green);color:white;border:0;padding:12px 17px;border-radius:30px;font-size:12px}
+.menu{display:none;background:none;border:0;font-size:24px}
+.hero{padding:65px 7% 70px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;background:#eaece4;min-height:490px}
+.eyebrow{font-size:11px;letter-spacing:3px;color:#718276;font-weight:700;margin-bottom:22px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,68px);line-height:1.1;color:var(--green);max-width:550px}
+.hero p{color:#69736b;line-height:1.8;margin:22px 0 28px;max-width:420px;font-size:14px}
+.primary{background:var(--green);color:white;padding:15px 25px;border:0;border-radius:3px;font-size:12px;letter-spacing:1px}
+.hero-image{height:355px;border-radius:5px;overflow:hidden;background:#d9ddd2}
+.hero-image img{width:100%;height:100%;object-fit:cover}
+.section{padding:75px 7%}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px;gap:15px}
+.section-head h2{font:36px 'Playfair Display',serif;color:var(--green)}
+.section-head p{color:var(--muted);font-size:12px;margin-top:8px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:25px}
+.filter{padding:9px 17px;border:1px solid #d9dcd3;background:transparent;border-radius:25px;font-size:12px;color:#56635a}
+.filter.active{background:var(--green);color:white;border-color:var(--green)}
+.search{width:100%;max-width:300px;padding:12px 15px;border:1px solid var(--line);background:white;border-radius:3px;outline:none;font-size:12px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product{background:var(--white);border:1px solid var(--line);overflow:hidden;transition:.25s}
+.product:hover{transform:translateY(-5px);box-shadow:0 12px 30px #203b2812}
+.product-img{height:225px;background:#eeeee8;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.product:hover .product-img img{transform:scale(1.05)}
+.product-info{padding:17px}
+.category{font-size:10px;color:#92978e;letter-spacing:1.5px;text-transform:uppercase}
+.product h3{font:19px 'Playfair Display',serif;margin:8px 0;color:#263b30}
+.price{font-size:14px;font-weight:700;color:var(--green);margin:10px 0 14px}
+.add{width:100%;padding:11px;background:var(--green);color:white;border:0;font-size:11px;letter-spacing:1px}
+.add:hover,.primary:hover{background:var(--green2)}
+.empty{text-align:center;grid-column:1/-1;padding:40px;color:var(--muted)}
+.story{background:var(--green);color:white;padding:65px 7%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.story h2{font:38px 'Playfair Display',serif;margin-bottom:15px}
+.story p{color:#d2ddd5;line-height:1.8;font-size:13px;max-width:450px}
+.story img{width:100%;height:270px;object-fit:cover;border-radius:3px}
+footer{padding:35px 7%;background:#102b23;color:#d6dfd8;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}
+footer strong{font:22px 'Playfair Display',serif}
+.overlay{position:fixed;inset:0;background:#0007;z-index:20;display:none}
+.overlay.show{display:block}
+.cart-panel{position:fixed;right:-430px;top:0;width:min(400px,100%);height:100%;background:var(--white);z-index:21;padding:25px;transition:.3s;display:flex;flex-direction:column}
+.cart-panel.show{right:0}
+.cart-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}
+.cart-top h2{font:25px 'Playfair Display',serif;color:var(--green)}
+.close{border:0;background:none;font-size:25px}
+.cart-items{overflow:auto;flex:1;padding:15px 0}
+.cart-item{display:flex;gap:13px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart-item img{width:75px;height:75px;object-fit:cover;background:#eee}
+.cart-item h4{font:16px 'Playfair Display',serif}
+.cart-item p{font-size:12px;margin:7px 0}
+.qty{display:flex;gap:10px;align-items:center}
+.qty button{width:23px;height:23px;border:1px solid var(--line);background:white}
+.total{border-top:1px solid var(--line);padding-top:18px}
+.total-line{display:flex;justify-content:space-between;font-weight:700;margin-bottom:15px}
+.checkout{width:100%;padding:15px;background:var(--green);color:white;border:0;letter-spacing:1px}
+@media(max-width:900px){.products{grid-template-columns:repeat(2,1fr)}.hero{gap:25px}.product-img{height:210px}}
+@media(max-width:600px){
+ header{height:65px;padding:0 5%}.logo{font-size:22px}nav{display:none}.menu{display:block}
+ .hero{grid-template-columns:1fr;padding:48px 6%;gap:25px}.hero-image{height:260px}
+ .section{padding:55px 5%}.section-head{align-items:start;flex-direction:column}.section-head h2{font-size:30px}
+ .products{gap:11px}.product-img{height:160px}.product-info{padding:12px}.product h3{font-size:16px}
+ .story{grid-template-columns:1fr;padding:50px 6%}.story h2{font-size:31px}
+ footer{padding:30px 6%}
+ .search{max-width:none}
+}
 </style>
 </head>
 <body>
-<div class="top">COMPLIMENTARY SHIPPING ON PREPAID ORDERS • TIMELESS STYLE, EVERY DAY</div>
-<header><a class="logo" href="#">TIME <span>LUXE</span></a><nav><a href="#shop">Shop Watches</a><a href="#benefits">Why TIME LUXE</a><a href="#payment">Payment</a></nav><button class="cart" onclick="openCart()">Bag (<span id="count">0</span>)</button></header>
-<main>
-<section class="hero"><div><div class="eyebrow">The art of arriving on time</div><h1>Make every second<br>look better.</h1><p>Discover statement watches designed to bring confidence, character and a touch of luxury to your everyday look.</p><a class="cta" href="#shop">SHOP THE COLLECTION</a></div><div class="hero-art"><div class="watch"><div class="strap"></div><div class="dial"><i></i></div></div></div></section>
-<section class="section" id="shop"><div class="section-head"><div><div class="eyebrow">Curated for your style</div><h2>Featured watches</h2><div class="sub">A sharp look. A standout moment.</div></div><div class="sub">TIME LUXE COLLECTION</div></div>
-<div class="product-grid">
-<article class="product"><div class="product-img"><div class="watch"><div class="strap"></div><div class="dial"><i></i></div></div></div><div class="product-info"><div class="tag">Featured • Available</div><h3>SUPER SPEED Men's Watch</h3><div class="price">₹588</div><button class="add" onclick="addToCart()">ADD TO BAG</button></div></article>
-<article class="product"><div class="product-img blue"><div class="watch"><div class="strap" style="background:linear-gradient(90deg,#343d49,#aeb9c5,#343d49)"></div><div class="dial"><i></i></div></div></div><div class="product-info"><div class="tag">Explore the collection</div><h3>Classic Steel Watch</h3><div class="price">Coming soon</div><button class="add" onclick="alert('This style is coming soon!')">COMING SOON</button></div></article>
-<article class="product"><div class="product-img dark"><div class="watch"><div class="strap" style="background:linear-gradient(90deg,#17191d,#555,#17191d)"></div><div class="dial"><i></i></div></div></div><div class="product-info"><div class="tag">Explore the collection</div><h3>Midnight Edition</h3><div class="price">Coming soon</div><button class="add" onclick="alert('This style is coming soon!')">COMING SOON</button></div></article>
-</div></section>
-<section class="benefits" id="benefits"><div><strong>Curated Style</strong><span>Standout designs for everyday wear</span></div><div><strong>Easy Ordering</strong><span>Simple, friendly checkout experience</span></div><div><strong>Shipping Support</strong><span>Delivery coordination planned with Shiprocket</span></div></section>
-<section class="pay" id="payment"><div><div class="eyebrow">Flexible payment plan</div><h2>Pay in two simple steps.</h2><p>For the featured ₹588 watch, the proposed split is 50% advance and the remaining 50% at delivery. The advance is requested by UPI. The balance-at-delivery option is subject to courier and payment-method availability.</p></div><div class="pay-card"><h3>SUPER SPEED Men's Watch</h3><div class="split"><span>Product total</span><b>₹588</b></div><div class="split"><span>50% UPI advance</span><b>₹294</b></div><div class="split"><span>50% due at delivery*</span><b>₹294</b></div><p style="font-size:11px;color:#777">*Partial COD must be enabled and confirmed with your courier account before accepting orders.</p><button class="add" onclick="openCart()">ORDER THIS WATCH</button></div></section>
-</main>
-<footer><div><b style="color:#fff;letter-spacing:.15em">TIME LUXE</b><p>Watches that make a statement.</p></div><div>Customer support: Add your business phone/email before launch.<br>© 2026 TIME LUXE. All rights reserved.</div></footer>
-<div class="modal" id="modal"><div class="dialog"><button class="close" onclick="closeCart()">×</button><h2>Your bag</h2><p id="cartline">Your bag is empty.</p><div id="checkoutArea" style="display:none"><label>Your name</label><input class="field" id="name" placeholder="Full name"><label>Mobile number</label><input class="field" id="phone" placeholder="10-digit mobile number" inputmode="numeric"><label>Delivery address</label><textarea class="field" id="address" rows="3" placeholder="House, street, city, state, PIN code"></textarea><div class="note">Demo checkout only: this page does not collect payments or create a real order. Add a secure backend, verified UPI payment flow and confirmed Shiprocket partial-COD setup before taking customer orders.</div><button class="checkout" onclick="demoOrder()">CONTINUE (DEMO)</button></div></div></div>
+<header>
+  <div class="logo">TIME <span>LUXE.</span></div>
+  <nav>
+    <a href="#">Home</a><a href="#collection">Collection</a><a href="#story">Our Story</a>
+  </nav>
+  <div class="actions">
+    <button class="cart-btn" onclick="openCart()">BAG (<span id="count">0</span>)</button>
+    <button class="menu" onclick="document.querySelector('nav').style.display='flex'">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">THE ART OF TIMELESS STYLE</div>
+    <h1>Every Second Has Its Own Elegance.</h1>
+    <p>Discover a carefully curated collection of timepieces designed for those who appreciate craftsmanship, detail and timeless beauty.</p>
+    <button class="primary" onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">EXPLORE COLLECTION →</button>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=1000" alt="Luxury wristwatch">
+  </div>
+</section>
+
+<section class="section" id="collection">
+  <div class="section-head">
+    <div><div class="eyebrow">CURATED FOR YOU</div><h2>Our Collection</h2><p>Find the perfect timepiece for every moment.</p></div>
+    <input class="search" id="search" placeholder="Search watches..." oninput="render()">
+  </div>
+  <div class="filters">
+    <button class="filter active" onclick="setFilter('All',this)">All Watches</button>
+    <button class="filter" onclick="setFilter('Classic',this)">Classic</button>
+    <button class="filter" onclick="setFilter('Sport',this)">Sport</button>
+    <button class="filter" onclick="setFilter('Luxury',this)">Luxury</button>
+  </div>
+  <div class="products" id="products"></div>
+</section>
+
+<section class="story" id="story">
+  <div>
+    <div class="eyebrow" style="color:#c9b48d">OUR PHILOSOPHY</div>
+    <h2>More Than A Watch.<br>A Lasting Impression.</h2>
+    <p>At TIME LUXE, we believe a watch is more than an instrument that tells time. It is a reflection of your personality, your ambition and your individual style. Discover timeless design, selected with care.</p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=900" alt="Elegant wristwatch">
+</section>
+
+<footer>
+  <strong>TIME LUXE.</strong>
+  <span>Timeless elegance. Every second.</span>
+  <span>© 2026 TIME LUXE. All rights reserved.</span>
+</footer>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="cart-panel" id="cart">
+  <div class="cart-top"><h2>Your Shopping Bag</h2><button class="close" onclick="closeCart()">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="total">
+    <div class="total-line"><span>Total</span><span id="total">₹0</span></div>
+    <button class="checkout" onclick="checkout()">PROCEED TO CHECKOUT</button>
+  </div>
+</aside>
+
 <script>
-let qty=0;function addToCart(){qty++;document.getElementById('count').textContent=qty;alert('SUPER SPEED Men's Watch added to your bag.');}
-function openCart(){document.getElementById('modal').classList.add('show');document.getElementById('cartline').textContent=qty?'SUPER SPEED Men\\'s Watch × '+qty+' — ₹'+(588*qty):'Your bag is empty.';document.getElementById('checkoutArea').style.display=qty?'block':'none';}
-function closeCart(){document.getElementById('modal').classList.remove('show')}
-function demoOrder(){if(!document.getElementById('name').value||!document.getElementById('phone').value||!document.getElementById('address').value){alert('Please fill in your name, mobile number and address.');return;}alert('This is a demo website. No order or payment has been submitted. Connect a secure backend to activate checkout.');}
+const watches=[
+{name:"Heritage Classic",category:"Classic",price:12999,img:"https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600"},
+{name:"Midnight Chronograph",category:"Sport",price:18999,img:"https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600"},
+{name:"Royal Gold Edition",category:"Luxury",price:24999,img:"https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600"},
+{name:"Minimalist Silver",category:"Classic",price:9999,img:"https://images.unsplash.com/photo-1539874754764-5a96559165b0?w=600"},
+{name:"Ocean Diver",category:"Sport",price:15999,img:"https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?w=600"},
+{name:"Prestige Automatic",category:"Luxury",price:32999,img:"https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600"},
+{name:"Urban Essential",category:"Classic",price:7999,img:"https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600"},
+{name:"Racing Spirit",category:"Sport",price:21999,img:"https://images.unsplash.com/photo-1619946928632-3e6b9e6f5f87?w=600"}
+];
+let filter='All',cart=[];
+const money=n=>'₹'+n.toLocaleString('en-IN');
+function render(){
+ const q=document.getElementById('search').value.toLowerCase();
+ const list=watches.map((w,i)=>({...w,index:i})).filter(w=>(filter==='All'||w.category===filter)&&w.name.toLowerCase().includes(q));
+ document.getElementById('products').innerHTML=list.length?list.map(w=>`
+ <article class="product">
+ <div class="product-img"><img src="${w.img}" alt="${w.name}" loading="lazy"></div>
+ <div class="product-info"><div class="category">${w.category}</div>
+ <h3>${w.name}</h3><div class="price">${money(w.price)}</div>
+ <button class="add" onclick="addCart(${w.index})">ADD TO BAG +</button></div></article>`).join(''):'<div class="empty">No watches found. Try another search.</div>';
+}
+function setFilter(f,btn){filter=f;document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render()}
+function addCart(i){let item=cart.find(x=>x.index===i);if(item)item.qty++;else cart.push({...watches[i],index:i,qty:1});updateCart();openCart()}
+function updateCart(){
+ document.getElementById('count').textContent=cart.reduce((s,x)=>s+x.qty,0);
+ document.getElementById('cartItems').innerHTML=cart.length?cart.map(x=>`
+ <div class="cart-item"><img src="${x.img}" alt="${x.name}"><div style="flex:1"><h4>${x.name}</h4><p>${money(x.price)}</p>
+ <div class="qty"><button onclick="changeQty(${x.index},-1)">−</button>${x.qty}<button onclick="changeQty(${x.index},1)">+</button></div></div></div>`).join(''):'<p style="text-align:center;padding:40px 0;color:#777">Your bag is empty.</p>';
+ document.getElementById('total').textContent=money(cart.reduce((s,x)=>s+x.price*x.qty,0));
+}
+function changeQty(i,n){let x=cart.find(x=>x.index===i);if(!x)return;x.qty+=n;if(x.qty<=0)cart=cart.filter(y=>y.index!==i);updateCart()}
+function openCart(){document.getElementById('cart').classList.add('show');document.getElementById('overlay').classList.add('show')}
+function closeCart(){document.getElementById('cart').classList.remove('show');document.getElementById('overlay').classList.remove('show')}
+function checkout(){if(!cart.length){alert('Your shopping bag is empty!');return}alert('Thank you for shopping with TIME LUXE! Online payment is not connected yet.');}
+render();updateCart();
 </script>
-</body></html>
+</body>
+</html>
