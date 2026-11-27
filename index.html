@@ -1,1 +1,72 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10131d">
+<title>TIME LUXE | Watches that make a statement</title>
+<style>
+:root{--ink:#10131d;--muted:#6c7180;--gold:#d9aa55;--cream:#f7f4ee;--white:#fff;--line:#e8e4dc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.top{background:var(--ink);color:#fff;text-align:center;padding:9px 14px;font-size:12px;letter-spacing:.12em}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
+.logo{font-weight:900;letter-spacing:.17em;font-size:22px}.logo span{color:var(--gold)}
+nav{display:flex;gap:28px;font-size:13px;color:#4e5260}.cart{border:1px solid var(--line);padding:10px 15px;border-radius:30px;font-size:13px;background:white}
+.hero{background:linear-gradient(115deg,#10131d 0%,#252a38 65%,#55442c 100%);color:white;min-height:470px;padding:80px 8%;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px;overflow:hidden}
+.eyebrow{color:#e8bf78;text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:700}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:18px 0;max-width:650px;letter-spacing:-.04em}
+.hero p{color:#d1d2d8;line-height:1.7;max-width:470px;font-size:15px}
+.cta{display:inline-block;background:var(--gold);color:#171923;padding:15px 25px;border-radius:3px;font-weight:800;margin-top:18px;font-size:13px;letter-spacing:.04em}
+.hero-art{height:300px;display:grid;place-items:center;position:relative}
+.watch{width:178px;height:250px;position:relative;transform:rotate(17deg);filter:drop-shadow(0 24px 25px #0008)}
+.strap{position:absolute;left:52px;width:74px;height:250px;background:linear-gradient(90deg,#8e682f,#e0b65f,#8b642d);border-radius:28px;top:0}
+.dial{position:absolute;left:24px;top:65px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#515a68,#101722 65%);border:8px solid #d8b66f;box-shadow:inset 0 0 0 2px #fff5}
+.dial:before{content:"";position:absolute;left:58px;top:24px;width:3px;height:42px;background:#f3d58d;transform:rotate(25deg);transform-origin:bottom}
+.dial:after{content:"";position:absolute;left:60px;top:62px;width:35px;height:2px;background:#f3d58d;transform:rotate(-20deg);transform-origin:left}
+.dial i{position:absolute;inset:13px;border:1px solid #d6b36b88;border-radius:50%}
+.section{padding:75px 8%}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.section h2{font-size:32px;margin:8px 0}.sub{color:var(--muted);font-size:14px}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{border:1px solid var(--line);background:#fff;overflow:hidden}
+.product-img{height:245px;background:linear-gradient(145deg,#f4f0e8,#e7dfd1);display:grid;place-items:center;position:relative}
+.product-img .watch{transform:scale(.72) rotate(-12deg);filter:drop-shadow(0 14px 12px #5555)}
+.product-img.blue{background:linear-gradient(145deg,#e8edf2,#d2dce5)}.product-img.dark{background:linear-gradient(145deg,#292d37,#555b67)}
+.product-info{padding:20px}.product-info h3{margin:0 0 7px;font-size:16px}.price{font-weight:800;font-size:19px}.old{color:#9b9da4;text-decoration:line-through;font-size:13px;margin-left:8px;font-weight:400}
+.tag{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#96702f;font-weight:800}
+.add{width:100%;border:0;background:var(--ink);color:#fff;padding:13px;margin-top:16px;font-weight:700}
+.benefits{background:var(--cream);display:grid;grid-template-columns:repeat(3,1fr);gap:25px;padding:36px 8%;text-align:center}
+.benefits strong{display:block;margin-bottom:7px}.benefits span{font-size:12px;color:var(--muted)}
+.pay{background:#151925;color:#fff;padding:65px 8%;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.pay h2{font-size:32px;margin:10px 0}.pay p{color:#c2c5ce;line-height:1.7;font-size:14px}
+.pay-card{background:#fff;color:var(--ink);padding:25px;border-radius:8px}.pay-card h3{margin-top:0}.split{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:12px 0;font-size:14px}.split b{font-size:16px}
+footer{padding:35px 8%;background:#0c0f17;color:#c6c8cf;display:flex;justify-content:space-between;gap:20px;font-size:12px}
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:10;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.dialog{background:#fff;width:min(520px,100%);padding:25px;border-radius:8px;max-height:90vh;overflow:auto}.dialog h2{margin-top:0}.close{float:right;border:0;background:#eee;border-radius:50%;width:30px;height:30px}
+.field{width:100%;padding:12px;border:1px solid #ddd;margin:7px 0 13px;border-radius:4px}.note{background:#fff8e9;padding:12px;font-size:12px;line-height:1.5;color:#76551d}
+.checkout{width:100%;padding:14px;background:var(--gold);border:0;font-weight:800;margin-top:14px}
+@media(max-width:700px){header{padding:0 5%;height:65px}nav{display:none}.hero{grid-template-columns:1fr;padding:55px 7%;text-align:center}.hero p{margin:auto}.hero-art{height:230px}.product-grid{grid-template-columns:1fr 1fr}.product-img{height:190px}.section{padding:55px 6%}.benefits{grid-template-columns:1fr;padding:30px 7%}.pay{grid-template-columns:1fr;padding:50px 7%}footer{flex-direction:column}.section-head{display:block}}
+@media(max-width:430px){.product-grid{grid-template-columns:1fr}.product-img{height:230px}}
+</style>
+</head>
+<body>
+<div class="top">COMPLIMENTARY SHIPPING ON PREPAID ORDERS • TIMELESS STYLE, EVERY DAY</div>
+<header><a class="logo" href="#">TIME <span>LUXE</span></a><nav><a href="#shop">Shop Watches</a><a href="#benefits">Why TIME LUXE</a><a href="#payment">Payment</a></nav><button class="cart" onclick="openCart()">Bag (<span id="count">0</span>)</button></header>
+<main>
+<section class="hero"><div><div class="eyebrow">The art of arriving on time</div><h1>Make every second<br>look better.</h1><p>Discover statement watches designed to bring confidence, character and a touch of luxury to your everyday look.</p><a class="cta" href="#shop">SHOP THE COLLECTION</a></div><div class="hero-art"><div class="watch"><div class="strap"></div><div class="dial"><i></i></div></div></div></section>
+<section class="section" id="shop"><div class="section-head"><div><div class="eyebrow">Curated for your style</div><h2>Featured watches</h2><div class="sub">A sharp look. A standout moment.</div></div><div class="sub">TIME LUXE COLLECTION</div></div>
+<div class="product-grid">
+<article class="product"><div class="product-img"><div class="watch"><div class="strap"></div><div class="dial"><i></i></div></div></div><div class="product-info"><div class="tag">Featured • Available</div><h3>SUPER SPEED Men's Watch</h3><div class="price">₹588</div><button class="add" onclick="addToCart()">ADD TO BAG</button></div></article>
+<article class="product"><div class="product-img blue"><div class="watch"><div class="strap" style="background:linear-gradient(90deg,#343d49,#aeb9c5,#343d49)"></div><div class="dial"><i></i></div></div></div><div class="product-info"><div class="tag">Explore the collection</div><h3>Classic Steel Watch</h3><div class="price">Coming soon</div><button class="add" onclick="alert('This style is coming soon!')">COMING SOON</button></div></article>
+<article class="product"><div class="product-img dark"><div class="watch"><div class="strap" style="background:linear-gradient(90deg,#17191d,#555,#17191d)"></div><div class="dial"><i></i></div></div></div><div class="product-info"><div class="tag">Explore the collection</div><h3>Midnight Edition</h3><div class="price">Coming soon</div><button class="add" onclick="alert('This style is coming soon!')">COMING SOON</button></div></article>
+</div></section>
+<section class="benefits" id="benefits"><div><strong>Curated Style</strong><span>Standout designs for everyday wear</span></div><div><strong>Easy Ordering</strong><span>Simple, friendly checkout experience</span></div><div><strong>Shipping Support</strong><span>Delivery coordination planned with Shiprocket</span></div></section>
+<section class="pay" id="payment"><div><div class="eyebrow">Flexible payment plan</div><h2>Pay in two simple steps.</h2><p>For the featured ₹588 watch, the proposed split is 50% advance and the remaining 50% at delivery. The advance is requested by UPI. The balance-at-delivery option is subject to courier and payment-method availability.</p></div><div class="pay-card"><h3>SUPER SPEED Men's Watch</h3><div class="split"><span>Product total</span><b>₹588</b></div><div class="split"><span>50% UPI advance</span><b>₹294</b></div><div class="split"><span>50% due at delivery*</span><b>₹294</b></div><p style="font-size:11px;color:#777">*Partial COD must be enabled and confirmed with your courier account before accepting orders.</p><button class="add" onclick="openCart()">ORDER THIS WATCH</button></div></section>
+</main>
+<footer><div><b style="color:#fff;letter-spacing:.15em">TIME LUXE</b><p>Watches that make a statement.</p></div><div>Customer support: Add your business phone/email before launch.<br>© 2026 TIME LUXE. All rights reserved.</div></footer>
+<div class="modal" id="modal"><div class="dialog"><button class="close" onclick="closeCart()">×</button><h2>Your bag</h2><p id="cartline">Your bag is empty.</p><div id="checkoutArea" style="display:none"><label>Your name</label><input class="field" id="name" placeholder="Full name"><label>Mobile number</label><input class="field" id="phone" placeholder="10-digit mobile number" inputmode="numeric"><label>Delivery address</label><textarea class="field" id="address" rows="3" placeholder="House, street, city, state, PIN code"></textarea><div class="note">Demo checkout only: this page does not collect payments or create a real order. Add a secure backend, verified UPI payment flow and confirmed Shiprocket partial-COD setup before taking customer orders.</div><button class="checkout" onclick="demoOrder()">CONTINUE (DEMO)</button></div></div></div>
+<script>
+let qty=0;function addToCart(){qty++;document.getElementById('count').textContent=qty;alert('SUPER SPEED Men's Watch added to your bag.');}
+function openCart(){document.getElementById('modal').classList.add('show');document.getElementById('cartline').textContent=qty?'SUPER SPEED Men\\'s Watch × '+qty+' — ₹'+(588*qty):'Your bag is empty.';document.getElementById('checkoutArea').style.display=qty?'block':'none';}
+function closeCart(){document.getElementById('modal').classList.remove('show')}
+function demoOrder(){if(!document.getElementById('name').value||!document.getElementById('phone').value||!document.getElementById('address').value){alert('Please fill in your name, mobile number and address.');return;}alert('This is a demo website. No order or payment has been submitted. Connect a secure backend to activate checkout.');}
+</script>
+</body></html>
